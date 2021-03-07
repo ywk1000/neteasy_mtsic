@@ -2,7 +2,7 @@
 name: 同步上游仓库
 on:
   schedule:
-    - cron: '0 8 */7 * *'
+    - cron: '20 12 * * *'
   watch:
     types: started
   repository_dispatch:
@@ -24,5 +24,5 @@ jobs:
         with:
           source_repo: "https://github.com/insChow/Actions_wyy.git"
           source_branch: "master"
-          destination_branch: "main"
+          destination_branch: "master"
           github_token: ${{ secrets.PAT }}
